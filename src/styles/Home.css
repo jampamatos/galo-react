@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+/* Estilo global */
+body {
+    margin: 0;
+    background-color: #121212; /* Preto suave */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Novo contêiner que engloba tudo */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo ocupa a altura total da tela */
+}
+
+/* Container principal */
+.home-container {
+    flex: 1; /* Ocupa o máximo de espaço possível */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+    padding: 30px;
+    padding-top: 100px;
+    width: 100%; /* Garante que o conteúdo ocupa toda a largura */
+}
+
+/* Cabeçalho */
+.home-header {
+    margin-bottom: 20px;
+}
+
+.home-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.highlight {
+    color: #FFD700; /* Apenas GALO em amarelo */
+    font-size: 2.8rem;
+}
+
+/* Navegação */
+.home-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #1E1E1E;
+    padding: 12px 20px;
+    width: 100vw; /* 100% da largura da viewport */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.home-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    border: 2px solid transparent;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #FFD700;
+    color: #121212;
+}
+
+/* Card do Próximo Jogo */
+.next-match-card {
+    background-color: #1E1E1E; /* Fundo cinza escuro */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    width: 60%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Título do card */
+.next-match-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Detalhes da partida */
+.match-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    border-radius: 50%; /* Escudos em formato circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra nos escudos */
+}
+
+.team span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Versus */
+.versus {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #bbb;
+    margin: 0 10px;
+}
+
+/* Informações da Partida */
+.match-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1E1E1E; /* Cor levemente diferente do fundo */
+    color: #aaa;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Sombra no topo do footer */
+}
+
+.footer a {
+    color: #FFD700; /* Amarelo Galo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .next-match-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .match-details {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .team img {
+        width: 50px; /* Reduz tamanho do escudo */
+        height: 50px;
+    }
+
+    .versus {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title {
+        font-size: 1rem;
+    }
+
+    .home-container {
+        padding: 100px 0 30px 0;
+    }
+
+    .highlight {
+        font-size: 1.5rem;
+    }
+    .next-match-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .match-details {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .team img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .versus {
+        font-size: 1.2rem;
+    }
+
+    .match-info p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}

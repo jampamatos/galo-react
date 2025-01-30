@@ -1,13 +1,62 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import '../styles/Home.css';  // Estilos específicos da Home
+import '../styles/global.css'; // Estilos globais
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'; 
+
+import { NextMatch } from '../types';
 
 const Home = () => {
+    const [nextMatch, setNextMatch] = useState<NextMatch | null>(null);
+
+    useEffect(() => {
+        const fetchNextMatch = async () => {
+            try {
+                const { data } = await axios.get('http://localhost:3001/next-match');
+                setNextMatch(data);
+            } catch (error) {
+                console.error('Erro ao buscar próximo jogo:', error);
+            }
+        };
+
+        fetchNextMatch();
+    }, []);
+
     return (
-        <div>
-            <h1>Galo React Dashboard</h1>
-            <p>Explore real-time stats and more about Clube Atlético Mineiro!</p>
-            <nav>
-                <Link to="/players">Go to Players</Link>
-            </nav>
+        <div className="page-container">
+            <Navbar /> {/* Agora o Navbar é um componente separado */}
+            
+            <div className="home-container">
+                <header className="home-header">
+                    <img src="https://media.api-sports.io/football/teams/1062.png" alt="Escudo do Clube Atlético Mineiro" className="home-logo" />
+                    <h1 className="home-title">
+                        The <span className="highlight">GALO REACT</span> Project
+                    </h1>
+                </header>
+
+                {nextMatch && (
+                    <div className="next-match-card">
+                        <h2>Próximo Jogo</h2>
+                        <div className="match-details">
+                            <div className="team">
+                                <img src={nextMatch.homeTeam.logo} alt={nextMatch.homeTeam.name} />
+                                <span>{nextMatch.homeTeam.abbreviation}</span>
+                            </div>
+                            <div className="versus">VS</div>
+                            <div className="team">
+                                <img src={nextMatch.awayTeam.logo} alt={nextMatch.awayTeam.name} />
+                                <span>{nextMatch.awayTeam.abbreviation}</span>
+                            </div>
+                        </div>
+                        <div className="match-info">
+                            <p dangerouslySetInnerHTML={{ __html: nextMatch.matchInfo }} />
+                        </div>
+                    </div>
+                )}
+            </div>
+
+            <Footer /> {/* Footer separado */}
         </div>
     );
 };

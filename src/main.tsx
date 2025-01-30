@@ -1,3 +1,5 @@
+// To start the server, run the command: npm run dev
+
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import App from './App';

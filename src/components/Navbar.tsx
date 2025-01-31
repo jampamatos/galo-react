@@ -14,10 +14,12 @@ const Navbar = () => {
       </div>
 
       <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+        <li><a href="/">Home</a></li>
         <li><a href="/general-info">Informações Gerais</a></li>
         <li><a href="/team-stats">Estatísticas do Time</a></li>
         <li><a href="/match-stats">Estatísticas de Jogos</a></li>
         <li><a href="/player-stats">Estatísticas de Jogadores</a></li>
+        <li><a href="/about">Sobre o Galo React</a></li>
       </ul>
     </nav>
   );

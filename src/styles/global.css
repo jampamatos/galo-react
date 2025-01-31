@@ -19,5 +19,50 @@ body {
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupa a altura total da tela */
+    min-height: 100vh; /* Ocupa a tela toda */
+}
+
+/* Pra parte principal ocupar tudo e empurrar o footer */
+.home-container, 
+.general-info-container {
+    flex: 1; 
+    /* O que tiver aqui dentro vai "esticar", empurrando o footer para baixo */
+}
+
+/* Navegação */
+.home-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #1E1E1E;
+    padding: 12px 20px;
+    width: 100vw; /* 100% da largura da viewport */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1E1E1E; /* Cor levemente diferente do fundo */
+    color: #aaa;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Sombra no topo do footer */
+    margin-top: auto;
+}
+
+.footer a {
+    color: #FFD700; /* Amarelo Galo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

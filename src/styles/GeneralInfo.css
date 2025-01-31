@@ -1,0 +1,208 @@
+.general-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+    width: 100%;
+}
+
+/* Título principal */
+.general-info-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFD700;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilizando a seção do time */
+.team-info {
+    background-color: #1E1E1E; /* Fundo escuro como os outros cards */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Nome do time */
+.team-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Logo do time */
+.team-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Informações gerais */
+.team-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+/* Estilizando a seção do estádio */
+.team-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #FFD700;
+}
+
+/* Imagem do estádio */
+.venue-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Mensagem de erro */
+.error {
+    color: #FF4C4C;
+    font-weight: 600;
+    font-size: 1rem;
+    background: rgba(255, 76, 76, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Carregamento */
+.loading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFD700;
+    animation: blink 1.5s infinite;
+}
+
+/* Animação de carregamento */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Seção de jogadores */
+.players-section {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Cabeçalho da seção (Elenco + Dropdown) */
+.players-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 40px;
+    background: #1E1E1E;
+}
+
+/* Estilização do título "Elenco" */
+.players-header h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin: 0;
+}
+
+/* Estilização do dropdown */
+.players-header select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #252525;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 60px;
+}
+
+.players-header select:hover {
+    background: #333;
+}
+
+.players-header select:focus {
+    outline: none;
+    border-color: #FFC107;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .general-info-container {
+        padding: 120px 15px 40px;
+    }
+
+    .team-info {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .team-logo {
+        width: 80px;
+    }
+
+    .venue-image {
+        max-width: 90%;
+    }
+
+    .general-info-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .players-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    .players-header h2 {
+        margin-bottom: 10px;
+    }
+
+    .players-header select {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .general-info-container {
+        padding: 130px 10px 30px;
+    }
+
+    .team-info {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .team-logo {
+        width: 70px;
+    }
+
+    .venue-image {
+        max-width: 80%;
+    }
+}

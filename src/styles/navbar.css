@@ -52,7 +52,7 @@
     transform: rotate(90deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .menu-icon {
         display: block;
     }

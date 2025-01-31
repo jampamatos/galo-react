@@ -1,11 +1,10 @@
+import { NextMatch } from '../types';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/Home.css';  // Estilos específicos da Home
-import '../styles/global.css'; // Estilos globais
+import '../styles/Home.css';
+import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'; 
-
-import { NextMatch } from '../types';
 
 const Home = () => {
     const [nextMatch, setNextMatch] = useState<NextMatch | null>(null);
@@ -35,7 +34,7 @@ const Home = () => {
                     </h1>
                 </header>
 
-                {nextMatch && (
+                {nextMatch ? (
                     <div className="next-match-card">
                         <h2>Próximo Jogo</h2>
                         <div className="match-details">
@@ -52,6 +51,10 @@ const Home = () => {
                         <div className="match-info">
                             <p dangerouslySetInnerHTML={{ __html: nextMatch.matchInfo }} />
                         </div>
+                    </div>
+                ) : (
+                    <div className="next-match-card loading">
+                        Carregando informações do próximo jogo...
                     </div>
                 )}
             </div>

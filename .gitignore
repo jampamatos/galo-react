@@ -1,0 +1,34 @@
+# Ignore Python virtual environment
+venv/
+backend/venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore database files (if any local SQLite is used for testing)
+*.db
+*.sqlite3
+
+# Ignore environment variables and secrets
+.env
+.env.local
+backend/.env
+
+# Ignore IDE configurations
+.vscode/
+.idea/
+*.iml
+
+# Ignore node_modules (for frontend)
+frontend/node_modules/
+frontend/.vite/
+
+# Ignore build artifacts
+frontend/dist/
+frontend/build/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

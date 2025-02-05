@@ -116,8 +116,8 @@ galo-react/
 
 - [X] Create **GitHub repository** (`galo-react`), initialize README and `.gitignore`.
 - [X] Install **Python 3.9+, Node.js (LTS)**, and **PostgreSQL** (optional for local dev).
-- [ ] Organize project folders (backend for FastAPI, frontend for React).
-- [ ] Create and activate a **Python virtual environment**, install dependencies.
+- [X] Organize project folders (backend for FastAPI, frontend for React).
+- [X] Create and activate a **Python virtual environment**, install dependencies.
 
 **Completion Criteria**: Project environment is set up, GitHub repository is configured.
 

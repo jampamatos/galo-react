@@ -125,10 +125,10 @@ galo-react/
 
 ### Phase 1: Database and ORM Models
 
-- [ ] Set up **PostgreSQL** in Railway and obtain `DATABASE_URL`.
-- [ ] Define **SQLAlchemy models** (`Season`, `Team`, `Match`, etc.).
-- [ ] Initialize **Alembic**, configure `env.py`, and generate migrations.
-- [ ] Run **database migrations** to create tables.
+- [X] Set up **PostgreSQL** in Railway and obtain `DATABASE_URL`.
+- [X] Define **SQLAlchemy models** (`Season`, `Team`, `Match`, etc.).
+- [X] Initialize **Alembic**, configure `env.py`, and generate migrations.
+- [X] Run **database migrations** to create tables.
 
 **Completion Criteria**: Database is structured and accessible through SQLAlchemy.
 
